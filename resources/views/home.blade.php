@@ -19,18 +19,18 @@
 
     <h1>Treni che sono in partenza a partire da oggi:</h1>
 
-    <table class="table table-dark">
+    <table border=1>
         <thead>
           <tr>
-            <th scope="col">AZIENDA</th>
-            <th scope="col">STAZIONE DI PARTENZA</th>
-            <th scope="col">STAZIONE DI ARRIVO</th>
-            <th scope="col">ORARIO DI PARTENZA</th>
-            <th scope="col">ORARIO DI ARRIVO</th>
-            <th scope="col">CODICE TRENO</th>
-            <th scope="col">NUMERO CARROZZE</th>
-            <th scope="col">IN ORARIO</th>
-            <th scope="col">CANCELLATO</th>
+            <th >AZIENDA</th>
+            <th>STAZIONE DI PARTENZA</th>
+            <th>STAZIONE DI ARRIVO</th>
+            <th>ORARIO DI PARTENZA</th>
+            <th>ORARIO DI ARRIVO</th>
+            <th>CODICE TRENO</th>
+            <th>NUMERO CARROZZE</th>
+            <th>IN ORARIO</th>
+            <th>CANCELLATO</th>
           </tr>
         </thead>
         <tbody>
@@ -43,8 +43,8 @@
                 <td>{{$train->orario_di_arrivo}}</td>
                 <td>{{$train->codice_treno}}</td>
                 <td>{{$train->numero_carrozze}}</td>
-                <td>{{$train->in_orario}}</td>
-                <td>{{$train->cancellato}}</td>
+                <td>{{$train->in_orario ? 'In orario' : 'In ritardo'}}</td>
+                <td>{{$train->cancellato ? 'Sì' : 'No'}}</td>
             </tr>
                 
             @endforeach
