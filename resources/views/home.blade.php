@@ -17,7 +17,7 @@
 
 <body>
 
-    <h1>Treni che sono in partenza a partire da oggi:</h1>
+    <h1>Tutti i treni:</h1>
 
     <table border=1>
         <thead>
